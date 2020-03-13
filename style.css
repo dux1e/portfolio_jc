@@ -1,0 +1,388 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+/*Nav bar*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 16px 40px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.sidenav .toplink {
+    padding-top: 80px;
+}
+
+
+.sidenav a:hover {
+    color:#f1f1f1;
+}
+/* This is for the closebutton */
+/* .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+} */
+
+.searchbox {
+    position: absolute;
+    top: 1.5em;
+    left: 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    border-color: transparent;
+}
+
+input[type="text"] {
+    padding: .4em;
+    background-color: #f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-bars {
+    font-size: 2em;
+}
+
+.fa-bars:hover {
+    cursor: pointer;
+    color: #736E70;
+}
+
+/*Main CSS*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr 2fr 1fr;
+    grid-template-areas: 
+    'burger    header    header    logo'
+    'content-l content-l content-r content-r'
+    'about     about     about     about'
+    'footer    footer    footer    footer ';
+    height: 100vh;
+}
+
+/* Header */
+.burger {
+    grid-area: burger;
+    align-self: center;
+    padding-left: .5em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.header {
+    grid-area: header;
+    justify-self: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.links {
+    grid-area: logo;
+    justify-self: end;
+    padding-right: .5em;
+    padding-top: .5em;
+    font-size: 1.3em;
+}
+
+.fa-github {
+    padding-right: .5em;
+    color: #24292E;
+}
+
+.fa-linkedin-in {
+    color: #0077B5;
+}
+
+/* Main content */
+.content1 {
+    grid-area: content-l;
+    margin-top: 2em;
+}
+
+.content2 {
+    grid-area: content-r;
+    margin-top: 2em;
+
+}
+
+.box {
+    height: 100px;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 500px;
+    background: white;
+    border-radius: 50px;
+}
+
+.project-name {
+    /* Text orientation */
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin-top: 1em;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.project-contxt {
+    margin-top: 3em;
+    margin-right: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #818181;
+}
+
+
+
+.border {
+    background: linear-gradient(to bottom right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    height: 500px;
+    border-radius: 58px;
+    cursor: pointer;
+    background-size: 300% 100%;
+
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.border:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+/* Demo and source buttons */
+.buttons {
+    margin: 2%;
+    text-align: center;
+}
+
+.btn {
+    width: 150px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    letter-spacing: 3px;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+/* This is for coloring the buttons */
+.btn.demoborder {
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.btn.sourceborder {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+
+/* About */
+.about {
+    grid-area: about;
+    text-align: center;
+    margin: 0 20% 0 20%;
+    padding-top: 2.5em;
+    line-height: 1.4;
+}
+
+.about-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    background: linear-gradient(to bottom,#ff6b87, #6bffe3);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.about-heading {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-paragraph-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 30% 0 0;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+
+
+/* Do not change this */
+#main {
+    transition: margin-left .5s; 
+}
+
+/* Media quaries */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+@media screen and (max-width: 870px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 4fr 4fr 4fr 1fr;
+        grid-template-areas: 
+        'burger    header    header    logo'
+        'content-t content-t content-t content-t '
+        'content-b content-b content-b content-b'
+        'about     about     about     about'
+        'footer    footer    footer    footer ';
+    }
+    .links {
+        grid-area: logo;
+        justify-self: end;
+        align-self: center;
+        padding-right: 1em;
+        font-size: 1.2em;
+    }
+
+    .content1 {
+        grid-area: content-t;
+ 
+    }
+
+    .content2 {
+        grid-area: content-b;
+ 
+    }
+
+    .about {
+        grid-area: about;
+        margin: 0 20% 0 20%;
+    }
+    .about-heading {
+        writing-mode: horizontal-tb;
+        margin-top: .1em;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: .5em;
+        /* Text gradient */
+        background: linear-gradient(to right,#ff6b87, #6bffe3);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        height: 100%;
+    }
+
+    .about-paragraph-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 15% 0 15%;
+
+    }
+    
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+}
