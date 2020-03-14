@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="slidenav" class="sidenav">
-    <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+    <a href="javascript:void(0)" class="closebtn" onclick="navClose()">&times;</a>
     <!-- The code above is for a close button -->
     <input type="text" placeholder="Enter to search..." class="searchbox">
     <a href="index.html" class="toplink">Hjem</a>
@@ -26,7 +26,7 @@
 
 <div class="grid-container">
     <div class="burger">    
-        <i class="fas fa-bars burger" onclick="toggle()"></i>
+        <i class="fas fa-bars burger" onclick="navOpen()"></i>
     </div>
 
     <div class="header">
@@ -38,7 +38,7 @@
         <a href="https://www.linkedin.com/in/joakimmkc/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
 
-    <div class="content1" onclick="contentClose()">
+    <div class="content1" onclick="navClose(), navClose()">
         <div class="border">
             <div class="box">
                 <h1 class="box-content project-name">Projekt 1</h1>
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="content2" onclick="contentClose()">
+    <div class="content2" onclick="navClose()">
         <div class="border">
             <div class="box">
                 <h1 class="box-content project-name">Projekt 2</h1>
@@ -74,7 +74,7 @@
         </div>
     </div>
 
-    <div class="about" onclick="contentClose()">
+    <div class="about" onclick="navClose()">
         <h1>Om mig</h1>
         <p>
             Jeg er en glad fyr på 20 år som til dagligdag studere til datamatiker.<br>
@@ -83,7 +83,7 @@
         </p>
     </div>
 
-    <footer onclick="contentClose()">
+    <footer onclick="navClose()">
         <p class="copyright">Copyright &copy; 
             <script type="text/javascript">
                 document.write(new Date().getFullYear());

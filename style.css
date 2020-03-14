@@ -42,18 +42,18 @@ body {
     color:#f1f1f1;
 }
 /* This is for the closebutton */
-/* .sidenav .closebtn {
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 40px;
     margin-left: 50px;
-} */
+}
 
 .searchbox {
     position: absolute;
-    top: 1.5em;
-    left: 15px;
+    top: 4.7em;
+    left: 20px;
     border-radius: 30px;
     font-size: 14px;
     border-color: transparent;

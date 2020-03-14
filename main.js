@@ -2,6 +2,7 @@ const nav = document.getElementById('slidenav')
 const main = document.getElementById('main')
 
 
+
 // function openNav() {
 //     nav.style.width = "250px";
 //     main.style.marginLeft = "250px";
@@ -13,7 +14,7 @@ function closeNav() {
 }
 
 
-//Toggle button for burger menu
+//Toggle button for burger menu that pushes the screen
 function toggle() {
     if(nav.style.width == '250px' && main.style.marginLeft == '250px') {
         nav.style.width = '0';
@@ -22,6 +23,24 @@ function toggle() {
         nav.style.width = '250px';
         main.style.marginLeft = '250px';
     }
+}
+
+//button for burger menu that dont pucs the screen 
+function sidenavOverlay() {
+    if(nav.style.width == '250px') {
+        nav.style.width = '0';
+    } else {
+        nav.style.width = '250px;';
+    }
+}
+
+//Open the sidenav over content
+function navOpen() {
+    nav.style.width = '250px';
+}
+//Close the sidenav over content
+function navClose() {
+    nav.style.width = '0';
 }
 
 //Click the body to close the manu in condition
