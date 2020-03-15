@@ -287,10 +287,91 @@ input[type="text"] {
 }
 
 .about-paragraph-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr .5fr;
+    grid-template-areas: 
+    'paragraph    skills'
+    'education    skills'
+    'download     download';
+}
+
+.about-paragraph {
+    grid-area: paragraph;
+    line-height: 1.3em;
+    text-align: center;
+    padding: 1em;
+}
+
+.conpetence {
+    grid-area: skills;
+}
+
+.competence-text {
+    text-align: center;
+}
+
+.competence p {
+    line-height: 2em;
+}
+
+.education {
+    text-align: center;
+    padding-left: 1em;
+    padding-right:
+}
+
+
+.cv-download {
+    grid-area: download;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    justify-self: center;
+}
+
+.cv-button {
+    width: 300px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    letter-spacing: .3em;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    /* Button color */
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.cv-button:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.cv-button:focus {
+    outline: none;
+}
+
+.signature-container {
+    grid-area: about;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0 30% 0 0;
+    justify-self: center;
+}
+
+.signature {
+    height: 225px;
 }
 
 /* Footer */
@@ -328,6 +409,18 @@ footer {
         'about     about     about     about'
         'footer    footer    footer    footer ';
     }
+
+    .about-paragraph-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr 1fr .5fr;
+        grid-template-areas: 
+        'paragraph'
+        'skills'
+        'education'
+        'download';
+    }
+
+
     .links {
         grid-area: logo;
         justify-self: end;
@@ -367,14 +460,6 @@ footer {
         background-clip: text;
         -webkit-text-fill-color: transparent;
         height: 100%;
-    }
-
-    .about-paragraph-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 15% 0 15%;
-
     }
     
 
