@@ -3,4 +3,4 @@ Private portfolio test site
 
 This is NOT done
 
-Check out the site @ jcportfolio.dk
+Check out the site @ [jcportfolio.dk]
